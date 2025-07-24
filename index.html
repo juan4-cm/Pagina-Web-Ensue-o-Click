@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🧶Ensueño Click</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">🧶 Ensueño Click</div>
+    <nav>
+      <ul>
+        <li><a href="#" data-section="inicio">Inicio</a></li>
+        <li><a href="#" data-section="catalogo">Catálogo</a></li>
+        <li><a href="#" data-section="nosotros">Sobre Nosotros</a></li>
+      </ul>
+    </nav>
+    <div class="cart">🛒</div>
+  </header>
+
+  <!-- Contenedor dinámico -->
+  <main id="contenido">
+    <!-- Inicio cargado por defecto -->
+    <section id="inicio" class="seccion">
+      <h1>Bienvenido a Ensueño Click</h1>
+      <p>Amigurumis únicos hechos a mano. ¡Explora nuestro catálogo o solicita uno personalizado!</p>
+      <a href="#" class="btn" data-section="catalogo">Ver catálogo</a>
+    </section>
+
+    <section id="catalogo" class="seccion oculto">
+      <h2>Catálogo de Amigurumis</h2>
+      <div class="grid">
+        <div class="producto">
+          <img src="https://th.bing.com/th/id/OIP.DlrbWEGvQqxB-As3CQ01NAHaKf?w=129&h=183&c=7&r=0&o=7&pid=1.7&rm=3" alt="Amigurumi Oso" />
+          <h3>Oso de crochet</h3>
+          <p>$35.000</p>
+        </div>
+        <div class="producto">
+          <img src="https://th.bing.com/th/id/OIP.sqZnnN04h1dRKaWOb6j0jAHaJ3?w=203&h=271&c=7&r=0&o=7&pid=1.7&rm=3" alt="Amigurumi Unicornio" />
+          <h3>Unicornio mágico</h3>
+          <p>$40.000</p>
+        </div>
+        <div class="producto">
+          <img src="https://th.bing.com/th/id/OIP.0FoaGuaso90H1SryZhHL8AHaHa?w=171&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Amigurumi Abeja" />
+          <h3>Abejita feliz</h3>
+          <p>$30.000</p>
+        </div>
+      </div>
+      <h2>Mas productos</h2>
+      <div class="producto">
+          <img src="c:\Users\castr\OneDrive\Documentos\Fotos pagina web\0c413419-9013-4d64-9690-80667462eaf8.jpg"
+           />
+           <img src="c:\Users\castr\OneDrive\Documentos\Fotos pagina web\dfe441e5-64e9-4ceb-94b6-e0050fb00b20.jpg"
+           />
+        </div>
+
+    </section>
+
+    <section id="nosotros" class="seccion oculto">
+      <h2>Sobre Nosotros</h2>
+      <p>Somos un emprendimiento dedicado a crear piezas únicas de amigurumi, con buena calidad y diseño.</p>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2025 Ensueño Click</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
