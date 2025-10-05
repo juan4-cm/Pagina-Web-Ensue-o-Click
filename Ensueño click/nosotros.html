@@ -8,19 +8,33 @@
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="logo">🧶 Ensueño Click</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="nosotros.html" class="active">Sobre Nosotros</a></li>
-        <li><a href="carrito.html">Carrito 🛒 (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo">Ensueño Click</div>
+  <nav>
+    <ul>  
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="politica.html">Política de Datos</a></li>
+    </ul>
+  </nav>
+  <div class="carrito-icono" onclick="toggleCarrito()">🛒 <span id="contador-carrito">0</span></div>
+</header>
 
-  <!-- Sección sobre nosotros -->
+<!-- Panel del carrito (puedes copiarlo en todas las páginas para que siempre se vea igual) -->
+<div id="carrito-panel" class="carrito-panel">
+  <h2>Tu Carrito</h2>
+  <ul id="lista-carrito"></ul>
+  <p id="total">Total: $0</p>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
+</div>
+
+
+<script src="carrito.js"></script>
+
+
+  <!-- Sección Sobre Nosotros -->
   <section class="seccion">
     <h2>Sobre Nosotros</h2>
     <p>En <strong>Ensueño Click</strong> nos apasiona el arte del crochet.  

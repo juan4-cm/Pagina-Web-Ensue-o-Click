@@ -2,33 +2,102 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Ensueño Click - Catálogo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo - Ensueño Click</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">🧶 Ensueño Click</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html" class="active">Catálogo</a></li>
-        <li><a href="nosotros.html">Sobre Nosotros</a></li>
-        <li><a href="carrito.html">Carrito 🛒 (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo">Ensueño Click</div>
+  <nav>
+    <ul>  
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="politica.html">Política de Datos</a></li>
+    </ul>
+  </nav>
+  <div class="carrito-icono" onclick="toggleCarrito()">🛒 <span id="contador-carrito">0</span></div>
+</header>
 
-  <section class="seccion">
-    <h2>Nuestro Catálogo</h2>
-    <div class="grid">
-      <!-- Aquí se repiten productos como en tu versión anterior -->
-    </div>
-  </section>
+<!-- Panel del carrito (puedes copiarlo en todas las páginas para que siempre se vea igual) -->
+<div id="carrito-panel" class="carrito-panel">
+  <h2>Tu Carrito</h2>
+  <ul id="lista-carrito"></ul>
+  <p id="total">Total: $0</p>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
+</div>
+
+
+<script src="carrito.js"></script>
+
+
+  <main>
+    <section class="seccion">
+      <h1>Catálogo de Productos</h1>
+      <div class="grid">
+
+        <div class="producto">
+          <img src="img/0c413419-9013-4d64-9690-80667462eaf8.jpg" alt="Muñecos personalizados">
+          <h3>Muñecos personalizados</h3>
+          <p>$45.000</p>
+          <button onclick="agregarAlCarrito('Muñecos personalizados', 45000)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/2c02df68-0b80-42d8-99ba-fa2ead0e8b94.jpg" alt="Messi amigurumi">
+          <h3>Messi amigurumi</h3>
+          <p>$90.000</p>
+          <button onclick="agregarAlCarrito('Messi amigurumi', 90000)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/7d1d9e84-e7f0-4edc-943e-17c482e2a377.jpg" alt="Pesebre navideño">
+          <h3>Pesebre navideño</h3>
+          <p>$85.000</p>
+          <button onclick="agregarAlCarrito('Pesebre navideño', 85000)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/9ea2289f-fc82-4de6-9228-0eab2b690b47.jpg" alt="Muñecos navideños">
+          <h3>Muñecos navideños</h3>
+          <p>$50.000</p>
+          <button onclick="agregarAlCarrito('Muñecos navideños', 50000)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/bf8ed128-4e07-49f0-bf8f-31658560c708.jpg" alt="Frailejon">
+          <h3>Frailejon</h3>
+          <p>$55.000</p>
+          <button onclick="agregarAlCarrito('Frailejon', 55000)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+          <img src="img/d8d7b26c-bd46-4002-970c-edfa07d08d6b.jpg" alt="Manteles para decoracion">
+          <h3>Manteles para decoracion</h3>
+          <p>$60.000</p>
+          <button onclick="agregarAlCarrito('Manteles para decoracion', 60000)">Añadir al carrito</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- 🛒 Panel del carrito -->
+  <div id="carrito-panel" class="carrito-panel">
+    <h2>Tu Carrito</h2>
+    <ul id="lista-carrito"></ul>
+    <p id="total">Total: $0</p>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Ensueño Click</p>
-    <p><a href="politica.html">Política de Tratamiento de Datos</a></p>
+    <p>© 2025 Ensueño Click - Todos los derechos reservados</p>
   </footer>
-  <script src="script.js"></script>
+
+  <script src="carrito.js"></script>
 </body>
 </html>
+
+

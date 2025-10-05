@@ -95,9 +95,13 @@ main {
 }
 
 .producto img {
-  max-width: 100%;
+  width: 250px;       /* ancho fijo */
+  height: 250px;      /* alto fijo */
+  object-fit: cover;  /* mantiene proporción y recorta */
   border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* opcional */
 }
+
 
 /* Botones */
 button, .btn {
@@ -251,3 +255,92 @@ footer {
   margin-top: 20px;
 }
 
+
+/* Estilo base */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado al pasar el mouse */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #5e3c99;
+  transition: width 0.3s ease;
+}
+
+/* Efecto hover */
+nav a:hover {
+  color: #d1c4e9; /* tono más claro al pasar */
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Enlace activo */
+nav a.active {
+  font-weight: bold;
+  color: #5e3c99;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
+.carrito-icono {
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-left: 20px;
+}
+
+.carrito-icono span {
+  background: purple;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 8px;
+  font-size: 0.8em;
+}
+
+.carrito-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  border-left: 2px solid purple;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.3);
+  padding: 20px;
+  transition: right 0.3s ease;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.carrito-panel.abierto {
+  right: 0;
+}
+
+.carrito-panel h2 {
+  color: purple;
+  margin-bottom: 15px;
+}
+
+.carrito-panel button {
+  background: purple;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}

@@ -3,46 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ensueño Click - Política de Tratamiento de Datos</title>
+  <title>Política de Tratamiento de Datos - Ensueño Click</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">🧶 Ensueño Click</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="catalogo.html">Catálogo</a></li>
-        <li><a href="nosotros.html">Sobre Nosotros</a></li>
-        <li><a href="carrito.html">Carrito 🛒 (<span id="cart-count">0</span>)</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <div class="logo">Ensueño Click</div>
+  <nav>
+    <ul>  
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="nosotros.html">Sobre Nosotros</a></li>
+      <li><a href="politica.html">Política de Datos</a></li>
+    </ul>
+  </nav>
+  <div class="carrito-icono" onclick="toggleCarrito()">🛒 <span id="contador-carrito">0</span></div>
+</header>
 
-  <!-- Política -->
-  <section class="seccion">
-    <h2>Política de Tratamiento de Datos</h2>
-    <p>En <strong>Ensueño Click</strong> respetamos y protegemos la privacidad de nuestros clientes.  
-    Esta política explica cómo recolectamos, usamos y protegemos sus datos personales.</p>
+<!-- Panel del carrito (puedes copiarlo en todas las páginas para que siempre se vea igual) -->
+<div id="carrito-panel" class="carrito-panel">
+  <h2>Tu Carrito</h2>
+  <ul id="lista-carrito"></ul>
+  <p id="total">Total: $0</p>
+  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  <button onclick="finalizarCompra()">Finalizar compra</button>
+</div>
 
-    <h3>1. Recolección de datos</h3>
-    <p>Recopilamos únicamente la información necesaria para la compra de nuestros productos, como nombre, correo electrónico, teléfono y dirección de envío.</p>
 
-    <h3>2. Uso de los datos</h3>
-    <p>Los datos serán utilizados exclusivamente para gestionar pedidos, envíos y comunicación relacionada con su compra.</p>
+<script src="carrito.js"></script>
 
-    <h3>3. Seguridad</h3>
-    <p>Implementamos medidas de seguridad para proteger su información contra accesos no autorizados.</p>
 
-    <h3>4. Derechos del usuario</h3>
-    <p>Usted tiene derecho a consultar, actualizar o eliminar sus datos en cualquier momento, enviando una solicitud a nuestro correo de contacto.</p>
-  </section>
+  <main class="contenido">
+    <h1>Política de Tratamiento de Datos Personales</h1>
+    <p>
+      En <strong>Ensueño Click</strong> respetamos y garantizamos la privacidad de la información personal de nuestros clientes, proveedores y usuarios. Por ello, damos cumplimiento a la Constitución Política de Colombia, la Ley 1266 de 2008, la Ley 1581 de 2012, el Decreto 1377 de 2013, y las disposiciones emitidas por la Superintendencia de Industria y Comercio (SIC).
+    </p>
 
-  <!-- Footer -->
+    <h2>1. Finalidad del Tratamiento</h2>
+    <p>
+      Los datos personales recolectados por <strong>Ensueño Click</strong> serán utilizados para las siguientes finalidades:
+    </p>
+    <ul>
+      <li>Gestionar pedidos, pagos y entregas de productos.</li>
+      <li>Enviar información relacionada con promociones, novedades y campañas.</li>
+      <li>Dar cumplimiento a obligaciones legales, contractuales y contables.</li>
+      <li>Atender peticiones, quejas, reclamos y consultas de los titulares.</li>
+    </ul>
+
+    <h2>2. Derechos de los Titulares</h2>
+    <p>De acuerdo con la Ley 1581 de 2012, los titulares de la información tienen derecho a:</p>
+    <ul>
+      <li>Acceder, conocer, actualizar y rectificar sus datos personales.</li>
+      <li>Solicitar la eliminación de sus datos en los casos que sea procedente.</li>
+      <li>Revocar la autorización otorgada para el tratamiento de datos.</li>
+      <li>Presentar quejas ante la Superintendencia de Industria y Comercio (SIC) por infracciones a la normativa.</li>
+    </ul>
+
+    <h2>3. Autorización del Titular</h2>
+    <p>
+      El tratamiento de datos personales requiere autorización previa, expresa e informada del titular, la cual podrá otorgarse por medios físicos, electrónicos o mediante cualquier conducta inequívoca.
+    </p>
+
+    <h2>4. Medidas de Seguridad</h2>
+    <p>
+      <strong>Ensueño Click</strong> adopta medidas técnicas, administrativas y humanas necesarias para proteger los datos personales contra pérdida, uso indebido, acceso no autorizado o fraudulento.
+    </p>
+
+    <h2>5. Vigencia</h2>
+    <p>
+      Esta política entra en vigencia desde su publicación y permanecerá en vigor mientras <strong>Ensueño Click</strong> haga uso de los datos personales de los titulares.
+    </p>
+
+    <h2>6. Contacto</h2>
+    <p>
+      Para ejercer los derechos de acceso, rectificación, actualización, supresión o revocatoria, el titular podrá comunicarse con nosotros a través del correo electrónico:  
+      <a href="castromarlesjuanjose@gmail.com">castromarlesjuanjose@gmail.com</a>.
+    </p>
+  </main>
+
   <footer>
-    <p>&copy; 2025 Ensueño Click</p>
-    <p><a href="politica.html" class="active">Política de Tratamiento de Datos</a></p>
+    <p>© 2025 Ensueño Click | Todos los derechos reservados</p>
+    <p><a href="politica.html">Política de Tratamiento de Datos</a></p>
   </footer>
 </body>
 </html>
+
