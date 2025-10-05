@@ -14,7 +14,6 @@ La idea es dar visibilidad a las artesanías y facilitar la compra en línea.
 ---
 
 ##  Estructura del proyecto
-##  Estructura del proyecto
 /proyecto-crochet
 │── index.html # Página principal
 │── about.html # Sobre nosotros
