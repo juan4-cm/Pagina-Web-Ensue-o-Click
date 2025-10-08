@@ -1,24 +1,30 @@
-#  Tienda de Artesanías en Crochet
+# 🧵 Ensueño Click
 
-Este proyecto es una página web diseñada para **promocionar y vender productos de crochet hechos a mano**.  
-La idea es dar visibilidad a las artesanías y facilitar la compra en línea.
-
----
-
-##  Características
-- Catálogo de productos en crochet (amigurumis, accesorios, decoración).
-- Diseño amigable y responsive.
-- Información sobre la tienda y los artesanos.
-- Sección de contacto para pedidos.
+Plataforma web para la venta de artesanías en crochet.  
+Incluye catálogo, carrito de compras y formulario de checkout.
 
 ---
 
-##  Estructura del proyecto
-/proyecto-crochet
-│── index.html # Página principal
-│── about.html # Sobre nosotros
-│── productos.html # Catálogo
-│── contacto.html # Página de contacto
-│── /css # Hojas de estilo
-│── /img # Imágenes de los productos
-│── /js # Scripts
+## ✨ Características principales
+
+- 🎨 **Catálogo de productos** con imágenes, precios y descripciones.
+- 🛒 **Carrito de compras** funcional con contador en el menú.
+- ✅ **Persistencia del carrito** usando `localStorage`.
+- 📩 **Formulario de checkout** para capturar datos del cliente antes de la compra.
+- 📱 **Diseño responsive** adaptado a dispositivos móviles y escritorio.
+- 🌐 **HTML, CSS y JavaScript puros**, sin frameworks externos.
+
+---
+
+## 📂 Estructura del proyecto
+
+EnsueñoClick/
+│── index.html # Página de inicio
+│── catalogo.html # Catálogo con carrito
+│── checkout.html # Formulario de compra
+│── nosotros.html # Sección "Sobre nosotros"
+│── politica.html # Política de datos
+│── styles.css # Estilos generales
+│── script.js (opcional si separas el JS)
+│── /img # Carpeta de imágenes de productos y logo
+│── favicon.png # Ícono de la pestaña del navegador
