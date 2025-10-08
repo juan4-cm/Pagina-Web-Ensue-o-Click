@@ -344,3 +344,67 @@ nav a.active::after {
   cursor: pointer;
   border-radius: 5px;
 }
+
+.checkout-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f0ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5e3c99;
+}
+
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.checkout-form input,
+.checkout-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.btn-comprar {
+  background: #5e3c99;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+  background: #432873;
+}
+
+.mensaje-confirmacion {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  background: #f8f0ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 20px;
+}
+
+.mensaje-confirmacion h3 {
+  color: #5e3c99;
+  margin-bottom: 10px;
+}

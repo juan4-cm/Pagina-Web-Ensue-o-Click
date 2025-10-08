@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra - Ensueño Click</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Ensueño Click</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Sobre Nosotros</a></li>
+        <li><a href="politica.html">Política de Datos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="seccion">
+      <h1>Finalizar Compra</h1>
+
+      <!-- Resumen del carrito -->
+      <div id="resumenCarrito" style="margin-bottom:20px;">
+        <h2>🛒 Resumen de tu pedido</h2>
+        <div id="listaCarrito"></div>
+        <p><strong>Total: </strong><span id="totalCarrito">$0</span></p>
+      </div>
+
+      <!-- Formulario -->
+      <form id="checkoutForm">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br><br>
+
+        <label for="metodo">Método de pago:</label>
+        <select id="metodo" name="metodo" required>
+          <option value="Contraentrega">Contraentrega</option>
+          <option value="Transferencia">Transferencia</option>
+          <option value="Tarjeta">Tarjeta</option>
+        </select><br><br>
+
+        <button type="submit">Confirmar Pedido</button>
+      </form>
+
+      <!-- Mensaje de confirmación -->
+      <div id="mensajeConfirmacion" style="display:none; margin-top:20px; text-align:center;">
+        <h2>✅ ¡Gracias por tu compra!</h2>
+        <p>Tu pedido ha sido registrado correctamente y se abrirá WhatsApp para confirmar.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Ensueño Click - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Recuperar carrito desde localStorage
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const listaCarrito = document.getElementById("listaCarrito");
+    const totalCarrito = document.getElementById("totalCarrito");
+
+    let total = 0;
+    listaCarrito.innerHTML = "";
+
+    carrito.forEach(item => {
+      const div = document.createElement("div");
+      div.textContent = `${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad}`;
+      listaCarrito.appendChild(div);
+      total += item.precio * item.cantidad;
+    });
+
+    totalCarrito.textContent = `$${total.toLocaleString()}`;
+
+    // Formulario
+    const form = document.getElementById('checkoutForm');
+    const mensaje = document.getElementById('mensajeConfirmacion');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Capturar datos cliente
+      const nombre = document.getElementById('nombre').value;
+      const telefono = document.getElementById('telefono').value;
+      const direccion = document.getElementById('direccion').value;
+      const metodo = document.getElementById('metodo').value;
+
+      // Productos del carrito
+      let productosTexto = "";
+      carrito.forEach(item => {
+        productosTexto += `• ${item.nombre} x${item.cantidad} - $${item.precio * item.cantidad}\n`;
+      });
+
+      // Mensaje WhatsApp
+      const mensajeWhatsApp = `🛍️ Nuevo pedido:\n\n${productosTexto}\n💰 Total: $${total.toLocaleString()}\n\n👤 Nombre: ${nombre}\n📞 Tel: ${telefono}\n📍 Dirección: ${direccion}\n💳 Pago: ${metodo}`;
+
+      // Número de WhatsApp 
+      const numero = "57301809820";
+      const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensajeWhatsApp)}`;
+
+      // Mostrar confirmación
+      form.style.display = 'none';
+      mensaje.style.display = 'block';
+
+      // Abrir WhatsApp
+      window.open(url, "_blank");
+
+      // Vaciar carrito
+      localStorage.removeItem("carrito");
+    });
+  </script>
+</body>
+</html>
